@@ -1,0 +1,7 @@
+# All files
+/*
+
+# Except
+!main/
+!.gitignore
+!starship.toml
