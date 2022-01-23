@@ -1,8 +1,11 @@
-alias gs='git status'
+alias gi='git init'
+alias gst='git status'
 alias ga='git add'
 alias gc='git commit'
 alias gps='git push'
 alias gpl='git pull'
+alias gsw='git switch'
+alias gb='git branch'
 
 alias nvm-d='nvm use default'
 alias nvm-s='nvm use stable'
