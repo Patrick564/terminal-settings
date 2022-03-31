@@ -1,11 +1,27 @@
-format = '$all'
-right_format = '$git_branch$nodejs'
+format = "$directory$git_status$package$cmd_duration $fill $git_branch$python$nodejs$golang \n $character"
+# right_format = '$git_branch$nodejs$python$golang'
+
+scan_timeout = 10
+add_newline = true
+
+[fill]
+symbol = ' '
+style = 'bold green'
 
 [directory]
 style = 'bold italic cyan'
 read_only = ''
-format = '[$read_only]($read_only_style) [$path]($style) '
+format = '[$read_only]($read_only_style) [$path ]($style)'
 truncation_symbol = '.../'
+
+[package]
+symbol = ''
+style = 'bold 208'
+format = '[\[ $symbol $version \]]($style)'
+
+[cmd_duration]
+style = 'dimmed yellow'
+format = '[\[ $duration \]]($style)'
 
 [git_branch]
 symbol = ''
@@ -25,7 +41,7 @@ ahead = ''
 behind = ''
 diverged = ''
 up_to_date = '[](bright-green)'
-format = '[\[ $all_status$ahead_behind \]]($style) '
+format = '[\[ ($all_status$ahead_behind) \]]($style) '
 
 [nodejs]
 style = 'bold green'
@@ -33,11 +49,14 @@ symbol = ''
 format = '[\[ $symbol ($version )\]]($style)'
 
 [python]
-symbol = " "
+style = 'bold blue'
+symbol = ''
+format = '[\[ $symbol ($version( \($virtualenv\)) )\]]($style)'
 
-[cmd_duration]
-style = 'dimmed yellow'
-format = '[\[ $duration \]]($style)'
+[golang]
+style = 'bold cyan'
+symbol = ''
+format = '[\[ $symbol ($version) \]]($style)'
 
 [aws]
 symbol = "  "
@@ -57,9 +76,6 @@ symbol = " "
 [elm]
 symbol = " "
 
-[golang]
-symbol = " "
-
 [hg_branch]
 symbol = " "
 
@@ -77,9 +93,6 @@ symbol = " "
 
 [nix_shell]
 symbol = " "
-
-[package]
-symbol = " "
 
 [perl]
 symbol = " "

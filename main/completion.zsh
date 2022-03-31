@@ -55,10 +55,5 @@ zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f
 
 autoload -Uz compinit
 compinit -i
-#if [[ -n ${HOME}/.zcompdump(#qN.mh+24) ]]; then
-#  compinit;
-#else
-#  compinit -C;
-#fi;
 
 _comp_options+=(globdots)
