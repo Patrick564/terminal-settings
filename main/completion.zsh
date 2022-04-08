@@ -1,11 +1,3 @@
-# +---------+
-# | zstyles |
-# +---------+
-
-# Ztyle pattern
-# :completion:<function>:<completer>:<command>:<argument>:<tag>
-
-# Define completers
 zstyle ':completion:*' completer _extensions _complete _approximate
 
 # Use cache for commands using cache
