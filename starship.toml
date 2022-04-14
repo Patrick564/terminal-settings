@@ -1,0 +1,116 @@
+format = "$directory$git_status$git_branch$cmd_duration $fill $package$python$nodejs$golang \n $character"
+# right_format = '$git_branch$nodejs$python$golang'
+
+scan_timeout = 10
+add_newline = true
+
+[fill]
+symbol = ' '
+style = 'bold green'
+
+[directory]
+style = 'bold italic cyan'
+read_only = ''
+format = '[$read_only]($read_only_style) [$path ]($style)'
+truncation_symbol = '.../'
+
+[package]
+symbol = ''
+style = 'bold 208'
+format = '[package:\([$version](208)\)](purple) '
+
+[cmd_duration]
+style = 'dimmed yellow'
+format = '[\[ $duration \]]($style)'
+
+[git_branch]
+symbol = ''
+format = '[git:\([$branch](yellow)\)]($style) '
+
+[git_status]
+style = 'bold red'
+conflicted = 'c '
+untracked = ' '
+stashed= 's '
+modified = '[ ](yellow)'
+staged = '+ '
+renamed = 'r '
+deleted = 'd '
+
+ahead = 'a'
+behind = 'b'
+diverged = 'd'
+up_to_date = '[](bright-green)'
+format = '[\( ($all_status | $ahead_behind) \)]($style) '
+
+[nodejs]
+style = 'bold green'
+symbol = ''
+format = '[node:\([$version](bold green)\)](purple)'
+
+[python]
+style = 'bold blue'
+symbol = ''
+format = '[python:\([($version)([@](red)$virtualenv)](bold blue)\)](purple)'
+
+[golang]
+style = 'bold cyan'
+symbol = ''
+format = '[\[ $symbol ($version) \]]($style)'
+
+[aws]
+symbol = "  "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[shlvl]
+symbol = " "
+
+[swift]
+symbol = "ﯣ "
